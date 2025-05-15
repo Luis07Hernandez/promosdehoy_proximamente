@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página No Encontrada (Error 404) - PromosDeHoy Colima</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="shortcut icon" href="/promosdehoy.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa; 
+            color: #343a40; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+        .error-container {
+            max-width: 600px;
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+        .error-code {
+            font-size: 7rem; 
+            font-weight: 700;
+            color: #FF6B6B; 
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+        .error-heading {
+            font-size: 2.25rem; 
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        .error-message {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        .btn-home {
+            background-color: #FFD166; 
+            border-color: #FFD166;
+            color: #343a40; 
+            padding: 12px 30px;
+            font-weight: 600;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+            display: inline-block; 
+        }
+        .btn-home:hover {
+            background-color: #f5c542; 
+            border-color: #f5c542;
+            color: #343a40;
+            transform: translateY(-2px); 
+        }
+        .footer-404 {
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: #6c757d; 
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    </head>
+<body>
+    <div class="error-container">
+        <div class="error-code">404</div>
+        <h1 class="error-heading">¡Ups! Página no encontrada</h1>
+        <p class="error-message">
+            Lo sentimos, la página que estás buscando no existe o ha sido movida.
+            Pero no te preocupes, ¡las mejores promociones de Colima te esperan en nuestra página principal!
+        </p>
+        <a href="https://promosdehoy.com/" class="btn btn-home">Volver a PromosDeHoy Colima</a>
+
+        <div class="footer-404">
+            <p>&copy; <span id="year"></span> PromosDeHoy Colima. Todos los derechos reservados.</p>
+        </div>
+    </div>
+
+    <script>
+        // Año actual para el footer
+        document.getElementById("year").innerText = new Date().getFullYear();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
