@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Próximamente - Tu App de Promociones en Colima</title>
+    <link rel="shortcut icon" href="promosdehoy.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif; /* Una fuente moderna y amigable */
+            background-color: #f8f9fa; /* Un fondo claro y limpio */
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #FF6B6B, #FFD166); /* Un degradado vibrante que sugiere ofertas y energía */
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero-section h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero-section p {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+        }
+
+        .countdown-container {
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            border-radius: 15px;
+            display: inline-block;
+        }
+
+        .countdown-item {
+            font-size: 2.5rem;
+            font-weight: bold;
+            line-height: 1;
+        }
+
+        .countdown-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-weight: 600;
+            color: #343a40; /* Un color oscuro para el texto principal */
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: #FF6B6B; /* Color primario para iconos */
+            margin-bottom: 20px;
+        }
+
+        .card-custom {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            background-color: white;
+        }
+
+        .card-custom:hover {
+            transform: translateY(-10px);
+        }
+
+        .btn-primary-custom {
+            background-color: #FF6B6B;
+            border-color: #FF6B6B;
+            padding: 12px 30px;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .btn-primary-custom:hover {
+            background-color: #e05252;
+            border-color: #e05252;
+        }
+
+        .for-businesses-section {
+            background-color: #fff9e6; /* Un color sutil y cálido para la sección de negocios */
+            padding: 80px 0;
+        }
+
+        .for-customers-section {
+            padding: 80px 0;
+        }
+
+        .footer {
+            background-color: #343a40;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        /* Animaciones sutiles */
+        .animated-icon {
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-15px);
+            }
+            60% {
+                transform: translateY(-7px);
+            }
+        }
+
+         /* Estilos específicos para el contador */
+         #countdown div {
+            display: inline-block;
+            margin: 0 15px;
+            text-align: center;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="display-4">¡Prepárate Colima!</h1>
+            <p class="lead">Las mejores promociones de tu ciudad están por llegar. No te pierdas el lanzamiento.</p>
+            <h2>Próximamente</h2>
+            <div class="countdown-container mt-4">
+                <div id="countdown">
+                    <div>
+                        <span id="days" class="countdown-item">--</span>
+                        <div class="countdown-label">Días</div>
+                    </div>
+                    <div>
+                        <span id="hours" class="countdown-item">--</span>
+                        <div class="countdown-label">Horas</div>
+                    </div>
+                    <div>
+                        <span id="minutes" class="countdown-item">--</span>
+                        <div class="countdown-label">Minutos</div>
+                    </div>
+                    <div>
+                        <span id="seconds" class="countdown-item">--</span>
+                        <div class="countdown-label">Segundos</div>
+                    </div>
+                </div>
+            </div>
+            <p class="mt-4">Mientras esperas, descubre lo que te ofreceremos:</p>
+        </div>
+    </section>
+
+    <section class="for-customers-section">
+        <div class="container">
+            <h2 class="section-title">Para Ti, Cazador de Ofertas</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card card-custom h-100 text-center p-4">
+                        <div class="feature-icon animated-icon"><i class="fas fa-bolt"></i></div>
+                        <h5 class="card-title">Promociones Frescas, Todos los Días</h5>
+                        <p class="card-text">Accede a las ofertas más recientes y emocionantes de Colima, actualizadas diariamente. ¡No te pierdas ninguna oportunidad de ahorrar!</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-custom h-100 text-center p-4">
+                        <div class="feature-icon animated-icon"><i class="fas fa-search-dollar"></i></div>
+                        <h5 class="card-title">Descubre y Anticipa</h5>
+                        <p class="card-text">Encuentra fácilmente las promociones del día y explora las ofertas que vendrán en los próximos días. Planifica tus compras y maximiza tus ahorros.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-custom h-100 text-center p-4">
+                        <div class="feature-icon animated-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <h5 class="card-title">Todo Colima en tu Bolsillo</h5>
+                        <p class="card-text">Desde restaurantes hasta tiendas y servicios, concentramos las mejores promociones locales para que siempre encuentres lo que buscas, ¡cerca de ti!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="for-businesses-section">
+        <div class="container">
+            <h2 class="section-title">Impulsa Tu Negocio en Colima</h2>
+            <p class="text-center lead mb-5">Atrae más clientes y aumenta tus ventas. ¡Promocionarte nunca fue tan fácil y efectivo!</p>
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-6">
+                    <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3AzcHQwcmRuZ2J6ZGo3eG5lcHk5MDNlc3YzNTJjNjNkdjExY3VyaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/UtPaD4Nf16Nw9yvGo1/giphy.gif" class="img-fluid rounded" alt="Negocios en Colima">
+                    </div>
+                <div class="col-lg-6">
+                    <div class="accordion" id="accordionBusinessBenefits">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <strong><i class="fas fa-bullhorn me-2 text-warning"></i>Visibilidad Inmediata y Dirigida</strong>
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionBusinessBenefits">
+                                <div class="accordion-body">
+                                    Tus promociones llegarán directamente a miles de clientes potenciales en Colima que buscan activamente ofertas. Sé el primero en su mente.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <strong><i class="fas fa-users me-2 text-warning"></i>Atrae Nuevos Clientes con el Gancho Perfecto</strong>
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionBusinessBenefits">
+                                <div class="accordion-body">
+                                    Las promociones son irresistibles. Utilízalas como la herramienta ideal para captar la atención de nuevos consumidores y convertirlos en clientes leales.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <strong><i class="fas fa-chart-line me-2 text-warning"></i>Incrementa Tus Ventas Significativamente</strong>
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionBusinessBenefits">
+                                <div class="accordion-body">
+                                    Más visibilidad y más clientes atraídos por ofertas se traducen directamente en un aumento de tus ingresos. ¡Haz que tus promociones trabajen para ti!
+                                </div>
+                            </div>
+                        </div>
+                         <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    <strong><i class="fas fa-lightbulb me-2 text-warning"></i>Fomenta la Creatividad en tus Ofertas</strong>
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionBusinessBenefits">
+                                <div class="accordion-body">
+                                    Experimenta con diferentes tipos de promociones (descuentos, 2x1, regalos, etc.) y descubre qué es lo que más atrae a tu público. Nuestra plataforma te da la flexibilidad que necesitas.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-4">
+                         <a href="#" class="btn btn-primary-custom">Quiero Promocionar Mi Negocio</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> PromosDeHoy. Todos los derechos reservados.</p>
+            <p>Próximamente conquistando todo México.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        // Fecha de lanzamiento: Establecida a 30 días desde el 15 de Mayo de 2025.
+        // Esto es el 14 de Junio de 2025 a las 00:00:00 horas.
+        const launchDate = new Date("June 1, 2025 00:00:00");
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = launchDate.getTime() - now;
+
+            // Cálculos de tiempo
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Mostrar el resultado
+            document.getElementById("days").innerText = days < 0 ? 0 : days;
+            document.getElementById("hours").innerText = hours < 0 ? "00" : (hours < 10 ? "0" : "") + hours;
+            document.getElementById("minutes").innerText = minutes < 0 ? "00" : (minutes < 10 ? "0" : "") + minutes;
+            document.getElementById("seconds").innerText = seconds < 0 ? "00" : (seconds < 10 ? "0" : "") + seconds;
+
+            // Si la cuenta regresiva termina
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById("countdown").innerHTML = "<div class='countdown-item' style='font-size: 1.5rem;'>¡YA ESTAMOS AQUÍ!</div>";
+                // Opcionalmente, puedes agregar más estilos o cambiar el contenido de la página.
+            }
+        }
+
+        // Actualizar el contador cada segundo
+        const countdownInterval = setInterval(updateCountdown, 1000);
+
+        // Ejecutar al cargar para mostrar el valor inicial rápidamente
+        updateCountdown();
+
+
+        // Año actual para el footer
+        document.getElementById("year").innerText = new Date().getFullYear();
+    </script>
+</body>
+</html>
