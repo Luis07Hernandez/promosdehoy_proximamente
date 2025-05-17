@@ -1,2 +1,2 @@
-exclude:
-  - sitemap.xml
+plugins:  
+  - jekyll-sitemap
